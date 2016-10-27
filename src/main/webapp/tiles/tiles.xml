@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC 
+"-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+    <definition name="masterPage" template="/views/layouts/master.jsp" >
+        <put-attribute name="header" value="/views/inc/header.jsp" />
+        <put-attribute name="sidebar" value="/views/inc/sidebar.jsp" />
+        <put-attribute name="footer" value="/views/inc/footer.jsp" />
+    </definition>
+    <definition name="loginPage" template="/views/layouts/loginTemplate.jsp" >
+    </definition>  
+       
+    <definition name="login/login" extends="loginPage">
+        <put-attribute name="content" value="/views/login/login.jsp" />
+    </definition>
+    <definition name="login/register" extends="loginPage">
+        <put-attribute name="content" value="/views/login/register.jsp" />
+    </definition>
+        
+   
+    <definition name="home/home" extends="masterPage">
+        <put-attribute name="content" value="/views/home/index.jsp" />
+    </definition>       
+        
+
+    
+
+    <definition name="country/index" extends="masterPage">
+        <put-attribute name="content" value="/views/country/index.jsp" />
+    </definition>
+    <definition name="country/create" extends="masterPage">
+        <put-attribute name="content" value="/views/country/create.jsp" />
+    </definition>	
+    <definition name="country/show" extends="masterPage">
+        <put-attribute name="content" value="/views/country/show.jsp" />
+    </definition>
+    <definition name="country/edit" extends="masterPage">
+        <put-attribute name="content" value="/views/country/edit.jsp" />
+    </definition>
+    <definition name="country/search" extends="masterPage">
+        <put-attribute name="content" value="/views/country/search.jsp" />
+    </definition>
+    <definition name="country/search_result" extends="masterPage">
+        <put-attribute name="content" value="/views/country/search_result.jsp" />
+    </definition>  
+   
+   
+    <definition name="city/index" extends="masterPage">
+        <put-attribute name="content" value="/views/city/index.jsp" />
+    </definition>
+    <definition name="city/create" extends="masterPage">
+        <put-attribute name="content" value="/views/city/create.jsp" />
+    </definition>	
+    <definition name="city/show" extends="masterPage">
+        <put-attribute name="content" value="/views/city/show.jsp" />
+    </definition>
+    <definition name="city/edit" extends="masterPage">
+        <put-attribute name="content" value="/views/city/edit.jsp" />
+    </definition>
+        
+                
+                        
+     <definition name="pdf/index" extends="masterPage">
+        <put-attribute name="content" value="/views/pdf/index.jsp" />
+    </definition>                               
+                                        
+                                                
+                                                        	
+</tiles-definitions>
