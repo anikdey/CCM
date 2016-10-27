@@ -7,6 +7,7 @@ import ccm.web.services.UserService;
 import ccm.web.validators.UserFormValidator;
 import java.util.ArrayList;
 import java.util.List;
+import javax.annotation.PostConstruct;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -33,9 +34,20 @@ public class LoginRegistrationController extends AbstractBaseController {
     @Autowired
     private UserFormValidator userFormValidator;
 
-    //@PostConstruct
+    @PostConstruct
     public void dumpDummyData() {
         roleService.dumpDummyRole();
+        Role role = roleService.findRoleById(1);
+        List<Role> authorities = new ArrayList<Role>();
+        authorities.add(role);
+        User user = new User();
+        user.setFirstName("Demo");
+        user.setLastName("User");
+        user.setEmail("demo@gmail.com");
+        user.setUsername("admin");
+        user.setPassword("admin");
+        user.setAuthorities(authorities);
+        userService.saveUser(user);
     }
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
