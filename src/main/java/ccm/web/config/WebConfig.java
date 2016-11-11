@@ -27,14 +27,14 @@ public class WebConfig extends WebMvcConfigurerAdapter {
     }
 
     @Bean
-    public TilesConfigurer tilesCongurer() {
+    public TilesConfigurer tilesConfigurer() {
         String[] tilesDefinitions = {"/tiles/tiles.xml"};
         TilesConfigurer tilesConfigurer = new TilesConfigurer();
         tilesConfigurer.setDefinitions(tilesDefinitions);
         tilesConfigurer.setCheckRefresh(true);
         return tilesConfigurer;
     }
-    
+
     @Bean
     public ResourceBundleViewResolver resourceBundleViewResolver() {
         ResourceBundleViewResolver resourceBundleViewResolver = new ResourceBundleViewResolver();
@@ -42,8 +42,6 @@ public class WebConfig extends WebMvcConfigurerAdapter {
         resourceBundleViewResolver.setBasename("views");
         return resourceBundleViewResolver;
     }
-    
-    
 
     @Bean
     public MessageSource messageSource() {

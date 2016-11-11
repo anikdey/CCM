@@ -29,9 +29,7 @@
                 <p class="login-box-msg">Sign in to start your session</p>
             </c:otherwise>
         </c:choose>
-        <c:if test="${not empty param.error}" >
-            <p class="login-box-msg">${sessionScope["SPRING_SECURITY_LAST_EXCEPTION"].message}</p>
-        </c:if>
+        
         <c:if test="${param.logout != null }" >
             You have been logged out.
         </c:if>

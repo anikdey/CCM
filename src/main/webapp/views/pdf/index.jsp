@@ -12,7 +12,7 @@
             <div class="col-md-10">
                 <div align="center">
                     <h1>Spring MVC PDF View Demo (using iText library)</h1>
-                    <h3><a target="_blank" href="<c:url value="/admin/pdf/downloadPDF"/>">Download PDF Document</a></h3>
+                    <h3><a target="_blank" href="<c:url value="/admin/pdf/generate-city-list-pdf"/>">Generate PDF Of City List</a></h3>
                 </div>
             </div>
         </div>

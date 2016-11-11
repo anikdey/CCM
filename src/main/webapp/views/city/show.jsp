@@ -5,15 +5,9 @@
 <%@ taglib uri="http://www.springframework.org/security/tags"  prefix="sec" %>
 <%@ page session="false" %>
 <div class="content-wrapper">
-    <section class="content-header">
-        <h1>
-            Dashboard
-            <small>Control panel</small>
-        </h1>
-    </section>
     <section class="content">
         <div class="row">
-            <div class="col-md-8 col-md-offset-2">
+            <div class="col-md-8">
                 <div class="box box-info">
                     <div class="box-header with-border">
                         <p class="box-title">City : <c:out value="${city.cityName}" /></p><br/>

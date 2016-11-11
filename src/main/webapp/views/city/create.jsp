@@ -5,15 +5,9 @@
 <%@ taglib uri="http://www.springframework.org/security/tags"  prefix="sec" %>
 <%@ page session="false" %>
 <div class="content-wrapper">
-    <section class="content-header">
-        <h1>
-            City
-            <small>Control panel</small>
-        </h1>
-    </section>
     <section class="content">
         <div class="row">
-            <div class="col-md-10">
+            <div class="col-lg-10">
                 <div class="box box-info">
                     <div class="box-header with-border">
                         <h3 class="box-title">Add New City</h3>

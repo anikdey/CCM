@@ -34,7 +34,7 @@ public class LoginRegistrationController extends AbstractBaseController {
     @Autowired
     private UserFormValidator userFormValidator;
 
-    @PostConstruct
+    //@PostConstruct
     public void dumpDummyData() {
         roleService.dumpDummyRole();
         Role role = roleService.findRoleById(1);

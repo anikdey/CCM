@@ -1,11 +1,14 @@
 package ccm.web.models;
 
 import java.io.Serializable;
+import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.Size;
 
@@ -25,6 +28,17 @@ public class Country implements Serializable {
     private String countryDescription;
     @Column(name = "PICTURE", nullable = true)
     private String picturePath;
+    
+    @OneToMany(cascade = CascadeType.REMOVE, mappedBy = "country")
+    private List<City> cities;
+
+    public List<City> getCities() {
+        return cities;
+    }
+
+    public void setCities(List<City> cities) {
+        this.cities = cities;
+    }
 
     public int getId() {
         return id;

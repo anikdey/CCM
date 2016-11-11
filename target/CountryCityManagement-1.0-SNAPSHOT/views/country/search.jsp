@@ -5,26 +5,16 @@
 <%@ taglib uri="http://www.springframework.org/security/tags"  prefix="sec" %>
 <%@ page session="false" %>
 <div class="content-wrapper">
-    <section class="content-header">
-        <h1>
-            Country
-            <small>Control panel</small>
-        </h1>
-        <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li class="active">Search Country</li>
-        </ol>
-    </section>
     <section class="content">
         <div class="row">
-            <div class="col-md-10">
+            <div class="col-lg-12">
                 <div class="box">      	
                     <div class="box-header with-border">
                         <div class="row">
-                            <div class="col-md-4 col-md-offset-2">
+                            <div class="col-lg-4 text-right">
                                 <h3 class="box-title" style="margin-top: 5px;">Search Country By Name :</h3>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-lg-3">
                                 <div class="box-tools ">
                                     <form class="form-inline" action="/search" method="POST">
                                         <div class="input-group pull-left input-group-sm" style="width: 350px;">
